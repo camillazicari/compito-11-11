@@ -52,15 +52,15 @@ console.log(numeriPari());
 */
 console.log("-----ES.4-----");
 
-let myArray = [12,32,1,10];
-function mySum () {
+function mySum(myArray) {
     let somma = 0;
     myArray.forEach(element => {
-        somma += element;
+      somma += element
     });
     return somma;
-}
-console.log(mySum());
+  }
+  
+  console.log(mySum([12, 32, 1, 10]));
 
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
