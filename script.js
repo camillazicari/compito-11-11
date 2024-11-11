@@ -64,25 +64,24 @@ console.log(mySum([12, 32, 1, 10]));
 */
 console.log("-----ES.5-----");
 
-function mySum2 (myArray) {
-    let sumArray = myArray.reduce ((sum, element) =>
-    sum + element, 0)
-    return sumArray;
+function mySum2(myArray) {
+  let sumArray = myArray.reduce((sum, element) => sum + element, 0);
+  return sumArray;
 }
-console.log(mySum2([12,33,21,40]));
+console.log(mySum2([12, 33, 21, 40]));
 
 /* ESERCIZIO 6 (map)
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
 */
 console.log("-----ES.6-----");
 
-function numAllaN (justNum, n) {
-    let newJustNum = justNum.map(element => {
-        return element + n;
-    })
-    return newJustNum;
-} 
-console.log(numAllaN([12,32,20,16],2)); 
+function numAllaN(justNum, n) {
+  let newJustNum = justNum.map((element) => {
+    return element + n;
+  });
+  return newJustNum;
+}
+console.log(numAllaN([12, 32, 20, 16], 2));
 
 /* ESERCIZIO 7 (map)
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
@@ -92,27 +91,27 @@ console.log("-----ES.7-----");
 
 //??????????????
 
-function strLenght (myStrArray) {
-    return myStrArray.map(element => {
-        element.length;
-    });
+function strLenght(myStrArray) {
+  return myStrArray.map((element) => {
+    element.length;
+  });
 }
-console.log(strLenght(['EPICODE', 'is', 'great'])); 
+console.log(strLenght(["EPICODE", "is", "great"]));
 
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
 console.log("-----ES.8-----");
 
-function arrayDispari () {
-    let myArray = [];
-    for (let i=0; i<100; i++) {
-        if (i % 2 !== 0) {
-            myArray.push(i);
-        }
+function arrayDispari() {
+  let myArray = [];
+  for (let i = 0; i < 100; i++) {
+    if (i % 2 !== 0) {
+      myArray.push(i);
     }
-    return myArray;
-} 
+  }
+  return myArray;
+}
 console.log(arrayDispari());
 
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
@@ -234,31 +233,37 @@ const movies = [
 /* ESERCIZIO 9 (forEach)
     Scrivi una funzione per trovare il film più vecchio nell'array fornito.
   */
-    console.log("-----ES.9-----");
+console.log("-----ES.9-----");
 
-    // ciclare l'array;
-    // intercettare l'anno (che è una stringa);
-    // trasformare l'anno in un numero;
-    // trovare uil num più basso;
-    // salvare l'oggetto del film che corrisponde all'anno più basso
+// ciclare l'array;
+// intercettare l'anno (che è una stringa);
+// trasformare l'anno in un numero;
+// trovare uil num più basso;
+// salvare l'oggetto del film che corrisponde all'anno più basso
 
-    function oldestMovie () {
-        let oldYear = 2050;
-        let oldMovie;
-        movies.forEach((element) => {
-            let movieYear = parseInt(element.Year);
-            if (movieYear < oldYear) {
-                oldYear = movieYear;
-                oldMovie = {...element}
-            }
-        })
-        return oldMovie;
+function oldestMovie() {
+  let oldYear = 2050;
+  let oldMovie;
+  movies.forEach((element) => {
+    let movieYear = parseInt(element.Year);
+    if (movieYear < oldYear) {
+      oldYear = movieYear;
+      oldMovie = { ...element };
     }
-    console.log(oldestMovie());
+  });
+  return oldMovie;
+}
+console.log(oldestMovie());
 
 /* ESERCIZIO 10
     Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
   */
+    console.log("-----ES.10-----");
+
+    function countMovie () {
+        return movies.length;
+    }
+    console.log(countMovie());
 
 /* ESERCIZIO 11 (map)
     Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
