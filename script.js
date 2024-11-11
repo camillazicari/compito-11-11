@@ -234,6 +234,27 @@ const movies = [
 /* ESERCIZIO 9 (forEach)
     Scrivi una funzione per trovare il film più vecchio nell'array fornito.
   */
+    console.log("-----ES.9-----");
+
+    // ciclare l'array;
+    // intercettare l'anno (che è una stringa);
+    // trasformare l'anno in un numero;
+    // trovare uil num più basso;
+    // salvare l'oggetto del film che corrisponde all'anno più basso
+
+    function oldestMovie () {
+        let oldYear = 2050;
+        let oldMovie;
+        movies.forEach((element) => {
+            let movieYear = parseInt(element.Year);
+            if (movieYear < oldYear) {
+                oldYear = movieYear;
+                oldMovie = {...element}
+            }
+        })
+        return oldMovie;
+    }
+    console.log(oldestMovie());
 
 /* ESERCIZIO 10
     Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
