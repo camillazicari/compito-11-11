@@ -268,11 +268,21 @@ console.log(oldestMovie());
 /* ESERCIZIO 11 (map)
     Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
   */
+    console.log("-----ES.11-----");
+
+    function titleArray (array) {
+        return array.map((element) => 
+            element.Title );
+    }
+    console.log(titleArray(movies));
 
 /* ESERCIZIO 12 (filter)
     Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
   */
+    console.log("-----ES.12-----");
 
+
+    
 /* ESERCIZIO 13 (reduce)
     Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
   */
