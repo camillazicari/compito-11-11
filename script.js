@@ -76,12 +76,21 @@ console.log(mySum2([12,33,21,40]));
 */
 console.log("-----ES.6-----");
 
-
+function numAllaN (justNum, n) {
+    let newJustNum = justNum.map(element => {
+        return element + n;
+    })
+    return newJustNum;
+} 
+console.log(numAllaN([12,32,20,16],2)); 
 
 /* ESERCIZIO 7 (map)
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
+console.log("-----ES.7-----");
+
+
 
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
