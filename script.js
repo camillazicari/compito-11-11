@@ -90,11 +90,30 @@ console.log(numAllaN([12,32,20,16],2));
 */
 console.log("-----ES.7-----");
 
+//??????????????
 
+function strLenght (myStrArray) {
+    return myStrArray.map(element => {
+        element.length;
+    });
+}
+console.log(strLenght(['EPICODE', 'is', 'great'])); 
 
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
+console.log("-----ES.8-----");
+
+function arrayDispari () {
+    let myArray = [];
+    for (let i=0; i<100; i++) {
+        if (i % 2 !== 0) {
+            myArray.push(i);
+        }
+    }
+    return myArray;
+} 
+console.log(arrayDispari());
 
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
