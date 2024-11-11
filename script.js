@@ -64,9 +64,19 @@ console.log(mySum([12, 32, 1, 10]));
 */
 console.log("-----ES.5-----");
 
+function mySum2 (myArray) {
+    let sumArray = myArray.reduce ((sum, element) =>
+    sum + element, 0)
+    return sumArray;
+}
+console.log(mySum2([12,33,21,40]));
+
 /* ESERCIZIO 6 (map)
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
 */
+console.log("-----ES.6-----");
+
+
 
 /* ESERCIZIO 7 (map)
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
