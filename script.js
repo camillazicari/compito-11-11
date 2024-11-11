@@ -281,8 +281,13 @@ console.log(oldestMovie());
   */
     console.log("-----ES.12-----");
 
+    function thisMillennium (array) {
+        return array.filter((element) => {
+            return parseInt(element.Year) > 2000;
+        })
+    }
+    console.log(thisMillennium(movies));
 
-    
 /* ESERCIZIO 13 (reduce)
     Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
   */
