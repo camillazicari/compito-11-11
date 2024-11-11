@@ -50,10 +50,23 @@ console.log(numeriPari());
 /* ESERCIZIO 4 (forEach)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
+console.log("-----ES.4-----");
+
+let myArray = [12,32,1,10];
+function mySum () {
+    let somma = 0;
+    myArray.forEach(element => {
+        somma += element;
+    });
+    return somma;
+}
+console.log(mySum());
 
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
+console.log("-----ES.5-----");
+
 
 /* ESERCIZIO 6 (map)
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
