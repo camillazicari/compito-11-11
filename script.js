@@ -4,16 +4,14 @@
 */
 console.log("-----ES.1-----");
 
-let str1 = "pluto";
-let str2 = "paperino";
-function myConcat() {
+function myConcat(str1, str2) {
   let substr1 = str1.substring(0, 2);
   let substr2 = str2.substring(5);
   let concatenazione = substr1.concat(substr2);
   let maiuscolo = concatenazione.toUpperCase();
   return maiuscolo;
 }
-console.log(myConcat());
+console.log(myConcat("pluto", "paperino"));
 
 /* ESERCIZIO 2 (for)
   Scrivi una funzione che torni un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 100 (incluso).
@@ -35,8 +33,7 @@ console.log(randomNum());
 */
 console.log("-----ES.3-----");
 
-let arrayNumerico = [14, 95, 73, 94, 51, 63, 80];
-function numeriPari() {
+function numeriPari(arrayNumerico) {
   let arrayPari = [];
   for (let i = 0; i < arrayNumerico.length; i++) {
     if (arrayNumerico[i] % 2 === 0) {
@@ -45,7 +42,7 @@ function numeriPari() {
   }
   return arrayPari;
 }
-console.log(numeriPari());
+console.log(numeriPari([14, 95, 73, 94, 51, 63, 80]));
 
 /* ESERCIZIO 4 (forEach)
   Scrivi una funzione per sommare i numeri contenuti in un array
@@ -53,20 +50,19 @@ console.log(numeriPari());
 console.log("-----ES.4-----");
 
 function mySum(myArray) {
-    let somma = 0;
-    myArray.forEach(element => {
-      somma += element
-    });
-    return somma;
-  }
-  
-  console.log(mySum([12, 32, 1, 10]));
+  let somma = 0;
+  myArray.forEach((element) => {
+    somma += element;
+  });
+  return somma;
+}
+
+console.log(mySum([12, 32, 1, 10]));
 
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
 console.log("-----ES.5-----");
-
 
 /* ESERCIZIO 6 (map)
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
