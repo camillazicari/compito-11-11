@@ -2,6 +2,8 @@
   Scrivi una funzione per concatenare due stringhe ricevute come parametri, selezionando solamente i primi 2 caratteri della
   prima e gli ultimi 3 della seconda. Converti la stringa risultante in maiuscolo e mostrala con un console.log().
 */
+console.log('-----ES.1-----');
+
 let str1 = 'pluto';
 let str2 = 'paperino';
 function myConcat () {
@@ -17,10 +19,24 @@ console.log(myConcat());
 /* ESERCIZIO 2 (for)
   Scrivi una funzione che torni un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 100 (incluso).
 */
+console.log('-----ES.2-----');
+
+function randomNum() {
+    let myArray = [];
+    for (let i=0; i<10; i++) {
+       let randomNumber = Math.floor(Math.random()*101);
+       myArray.push(randomNumber);
+    }
+    return myArray;
+}
+console.log(randomNum());
 
 /* ESERCIZIO 3 (filter)
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici
 */
+console.log('-----ES.3-----');
+
+
 
 /* ESERCIZIO 4 (forEach)
   Scrivi una funzione per sommare i numeri contenuti in un array
