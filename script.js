@@ -293,17 +293,21 @@ console.log(thisMillennium(movies));
 console.log("-----ES.13-----");
 
 const sumYears = () => {
-  return movies.reduce((total, movie) =>
-    total + parseInt(movie.Year), 0);
-}
+  return movies.reduce((total, movie) => total + parseInt(movie.Year), 0);
+};
 console.log(sumYears());
 
 /* ESERCIZIO 14 (find)
     Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
   */
-    console.log("-----ES.14-----");
+console.log("-----ES.14-----");
 
+const findMovie = (id) => {
+  return movies.find((element) => element.imdbID === id);
+};
+console.log(findMovie("tt4154756"));
 
 /* ESERCIZIO 15 (findIndex)
     Scrivi una funzione per ottenere dall'array fornito l'indice del primo film uscito nell'anno fornito come parametro.
   */
+console.log("-----ES.15-----");
