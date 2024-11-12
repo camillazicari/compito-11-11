@@ -89,12 +89,8 @@ console.log(numAllaN([12, 32, 20, 16], 2));
 */
 console.log("-----ES.7-----");
 
-//??????????????
-
 function strLenght(myStrArray) {
-  return myStrArray.map((element) => {
-    element.length;
-  });
+  return myStrArray.map((element) => element.length);
 }
 console.log(strLenght(["EPICODE", "is", "great"]));
 
@@ -112,6 +108,7 @@ function arrayDispari() {
   }
   return myArray;
 }
+
 console.log(arrayDispari());
 
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
@@ -311,3 +308,8 @@ console.log(findMovie("tt4154756"));
     Scrivi una funzione per ottenere dall'array fornito l'indice del primo film uscito nell'anno fornito come parametro.
   */
 console.log("-----ES.15-----");
+
+function getMovieByYear(year) {
+  return movies.findIndex((element) => parseInt(element.Year) === year);
+}
+console.log(getMovieByYear("2005"));
