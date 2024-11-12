@@ -258,43 +258,51 @@ console.log(oldestMovie());
 /* ESERCIZIO 10
     Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
   */
-    console.log("-----ES.10-----");
+console.log("-----ES.10-----");
 
-    function countMovie () {
-        return movies.length;
-    }
-    console.log(countMovie());
+function countMovie() {
+  return movies.length;
+}
+console.log(countMovie());
 
 /* ESERCIZIO 11 (map)
     Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
   */
-    console.log("-----ES.11-----");
+console.log("-----ES.11-----");
 
-    function titleArray (array) {
-        return array.map((element) => 
-            element.Title );
-    }
-    console.log(titleArray(movies));
+function titleArray(array) {
+  return array.map((element) => element.Title);
+}
+console.log(titleArray(movies));
 
 /* ESERCIZIO 12 (filter)
     Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
   */
-    console.log("-----ES.12-----");
+console.log("-----ES.12-----");
 
-    function thisMillennium (array) {
-        return array.filter((element) => {
-            return parseInt(element.Year) > 2000;
-        })
-    }
-    console.log(thisMillennium(movies));
+function thisMillennium(array) {
+  return array.filter((element) => {
+    return parseInt(element.Year) > 2000;
+  });
+}
+console.log(thisMillennium(movies));
 
 /* ESERCIZIO 13 (reduce)
     Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
   */
+console.log("-----ES.13-----");
+
+const sumYears = () => {
+  return movies.reduce((total, movie) =>
+    total + parseInt(movie.Year), 0);
+}
+console.log(sumYears());
 
 /* ESERCIZIO 14 (find)
     Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
   */
+    console.log("-----ES.14-----");
+
 
 /* ESERCIZIO 15 (findIndex)
     Scrivi una funzione per ottenere dall'array fornito l'indice del primo film uscito nell'anno fornito come parametro.
